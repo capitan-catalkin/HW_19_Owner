@@ -7,7 +7,7 @@ import java.util.Locale;
 import java.util.Map;
 
 public class RandomData {
-    public static Faker faker = new Faker(new Locale("en"));
+    public Faker faker = new Faker(new Locale("en"));
 
     public String randomName() {
         return faker.name().firstName();
@@ -67,24 +67,24 @@ public class RandomData {
     }
 
 
-    public static String randomGenders() {
+    public String randomGenders() {
         String[] gender = {"Male", "Female", "Other"};
         return faker.options().option(gender);
     }
 
-    public static String randomMonths() {
+    public String randomMonths() {
         String[] month = {"January", "February", "March", "April", "May",
                 "June", "July", "August", "September", "October", "November", "December"};
         return faker.options().option(month);
 
     }
 
-    public static String randomSubjects() {
+    public String randomSubjects() {
         String[] subjects = {"Maths", "Chemistry", "Computer Science", "Economics"};
         return faker.options().option(subjects);
     }
 
-    public static String randomHobbies() {
+    public String randomHobbies() {
         String[] hobbies = {"Sports", "Reading", "Music"};
         return faker.options().option(hobbies);
     }
@@ -94,7 +94,7 @@ public class RandomData {
         return faker.options().option(pictures);
     }
 
-    private final Map<String, String[]> statesAndCities = new HashMap<>();
+    public Map<String, String[]> statesAndCities = new HashMap<>();
 
     {
         statesAndCities.put("NCR", new String[]{"Delhi", "Gurgaon", "Noida"});

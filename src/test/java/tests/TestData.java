@@ -4,7 +4,7 @@ import utils.RandomData;
 
 public class TestData {
     RandomData date = new RandomData();
-    public final String name = date.randomName(),
+    public String name = date.randomName(),
                         lastName = date.randomLastName(),
                         email = date.randomEmail(),
                         gender = date.randomGender(),

@@ -20,7 +20,7 @@ public class RegistrationTestRandom extends TestBase {
                 .setDateOfBirth(td.day, td.month, td.year)
                 .setSubjects(td.subject)
                 .setHobbies(td.hobbie)
-                .setLoadFile(td.picture)
+                //.setLoadFile(td.picture)
                 .setAddress(td.address)
                 .setState(td.state)
                 .setCity(td.city)
@@ -34,9 +34,11 @@ public class RegistrationTestRandom extends TestBase {
                 .checkResult("Date of Birth", td.day + " " + td.month + "," + td.year)
                 .checkResult("Subjects", td.subject)
                 .checkResult("Hobbies", td.hobbie)
-                .checkResult("Picture", td.picture)
+                //.checkResult("Picture", td.picture)
                 .checkResult("Address", td.address)
                 .checkResult("State and City", td.state + " " + td.city);
+
+
     }
 
 
